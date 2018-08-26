@@ -8,7 +8,7 @@ MongoClient.connect(url, function(error, db) {
   var collection=dbs.collection('student');
   collection.updateMany(values, newvalues, function(error, res) {
     if (error) throw error;
-    console.log(res.result.nModified + " document(s) updated");
+    console.log(res.result.nModified + " document updated");
     db.close();
   });
 });
